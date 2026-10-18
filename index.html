@@ -114,8 +114,7 @@
       </ul>
       <div class="deadline-box"><span data-i18n="studentDeadline1"><b>Thema und Format:</b> Fr., 30.10.2026 (geplant)</span><span data-i18n="studentDeadline2"><b>Posterabgabe:</b> Fr., 27.11.2026 (geplant)</span></div>
       <p class="note" data-i18n="deadlineCaveat">Die Termine sind Vorschläge für 2026, orientiert an den Fristen aus 2025, und müssen noch bestätigt werden.</p>
-      <a class="download-link" id="poster-download" href="assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx" download hidden data-i18n="downloadPoster">A2-Postervorlage (.pptx) herunterladen ↓</a>
-      <span class="template-status" id="poster-template-pending" data-i18n="templatePending">Die A2-PowerPoint-Vorlage wird hier zum Download bereitgestellt, sobald die Datei im Repository hinterlegt ist.</span>
+      <a class="download-link" id="poster-download" href="assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx" download data-i18n="downloadPoster">A2-Postervorlage (.pptx) herunterladen ↓</a>
     </div>
     <div class="role-panel" id="panel-researchers" role="tabpanel" aria-labelledby="tab-researchers" data-role-panel="researchers" hidden>
       <h3 data-i18n="researchHeader">Projektvortrag für wissenschaftliche Mitarbeitende</h3>
@@ -227,7 +226,6 @@
     studentDeadline1:'<b>Topic and format:</b> Fri, 30 Oct 2026 (proposed)',studentDeadline2:'<b>Final poster:</b> Fri, 27 Nov 2026 (proposed)',
     deadlineCaveat:'These are proposed 2026 dates based on the 2025 deadlines; confirmation is pending.',
     downloadPoster:'Download A2 poster template (.pptx) ↓',
-    templatePending:'The A2 PowerPoint poster template will be available for download here once the file is added to the repository.',
     researchHeader:'Research project talk',
     researchIntro:'Research staff from Fraunhofer IPK and TU Berlin can present current or planned research projects. Talk slots will be coordinated with the department leadership.',
     researchPoint1:'<strong>Duration:</strong> Approximately <b>10 minutes for the presentation + 5 minutes for discussion</b>, 15 minutes total.',
@@ -267,10 +265,6 @@
     document.querySelectorAll('[data-role-tab]').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.roleTab===role)));
     document.querySelectorAll('[data-role-panel]').forEach(panel=>{panel.hidden=panel.dataset.rolePanel!==role});
   }));
-  // A static site cannot serve a local PowerPoint until the binary is uploaded.
-  fetch('assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx',{method:'HEAD'})
-    .then(response=>{if(response.ok){document.getElementById('poster-download').hidden=false;document.getElementById('poster-template-pending').hidden=true}})
-    .catch(()=>{});
 
   const rsvpForm=document.getElementById('rsvp-form');
   const formStatus=document.getElementById('form-status');
