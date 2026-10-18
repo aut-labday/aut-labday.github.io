@@ -26,6 +26,10 @@
     .choice{font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.choice input{accent-color:var(--green);width:17px;height:17px;margin:0}
     .form-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:4px}.form-btn{border:1px solid var(--green-dark);background:var(--green-dark);color:#fff;border-radius:3px;padding:11px 16px;font-weight:650;cursor:pointer}.form-btn:hover{background:#11705b;color:#fff}.form-btn.secondary{background:#fff;color:var(--green-dark)}.form-btn.secondary:hover{background:var(--soft)}
     .form-note{font-size:12px;color:var(--muted);max-width:760px}.form-status{font-size:13px;color:var(--green-dark);min-height:1.3em}
+    .form-field[hidden],.contribution-topic[hidden]{display:none}
+    .form-hint{font-size:12px;color:var(--muted);line-height:1.55;margin:2px 0 0}
+    .participation-guidance{margin-top:21px;padding:18px 20px;background:var(--soft);border-left:3px solid var(--green);font-size:13px;line-height:1.6;color:#40554d}
+    .participation-guidance p{margin:0 0 9px}.participation-guidance p:last-child{margin-bottom:0}
     @media(max-width:650px){.rsvp-panel{padding:20px}.field-row{grid-template-columns:1fr}.choice-row{gap:12px 18px}}
   </style>
 </head>
@@ -79,8 +83,13 @@
       <p class="note" data-i18n="challengeNote">Konkrete Fallstudien und Gruppeneinteilung folgen. Die Challenge ist als kollaborative Übung geplant, nicht als Programmierwettbewerb.</p>
     </div>
   </div></section>
-  <section id="participate"><div class="container"><div class="section-head"><span class="section-index">04</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Sag uns, ob du teilnehmen möchtest und ob du einen Poster- oder Vortragsbeitrag planst. Weitere organisatorische Details und Fristen werden intern mitgeteilt.</p>
-    <div class="contribution-grid"><article class="contribution"><h3 data-i18n="talkTitle">Projektvorträge</h3><p data-i18n="talkBody">Für wissenschaftliche Mitarbeitende. Geplant sind sechs kompakte Präsentationen zu laufenden oder zukünftigen Forschungsthemen mit anschließenden Fragen.</p></article><article class="contribution"><h3 data-i18n="postersTitle">Poster & Demos</h3><p data-i18n="postersBody">Für Studierende und studentische Mitarbeitende. Kleine Poster oder anschauliche Demonstratoren, mit ausreichend Zeit zum Austausch und gegenseitigen Besuch.</p></article></div>
+  <section id="participate"><div class="container"><div class="section-head"><span class="section-index">04</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Sag uns, ob du teilnehmen möchtest und ob du einen Poster-, Demo- oder Vortragsbeitrag planst. Bitte melde Thema und Format frühzeitig an; die Abgabefristen für die finalen Materialien werden noch bekanntgegeben.</p>
+    <div class="contribution-grid"><article class="contribution"><h3 data-i18n="talkTitle">Projektvorträge</h3><p data-i18n="talkBody">Für wissenschaftliche Mitarbeitende. Geplant sind sechs kompakte Präsentationen zu laufenden oder zukünftigen Forschungsthemen mit anschließenden Fragen.</p></article><article class="contribution"><h3 data-i18n="postersTitle">Poster & Demos</h3><p data-i18n="postersBody">Für Studierende und studentische Mitarbeitende. Poster im A2-Format oder kurze Demonstrationen. Bitte stimme Thema und Format vorher mit deiner Betreuungsperson ab.</p></article></div>
+    <div class="participation-guidance">
+      <p data-i18n="guidePoster"><strong>Hinweise für Poster:</strong> A2-Format, aussagekräftige Bilder und Stichpunkte statt langer Texte. Die fachliche Arbeit steht im Mittelpunkt, nicht organisatorische Projektdetails. Wie im Vorjahr sollte ein kurzer Steckbrief mit Name und Profilbild enthalten sein. Die Postervorlage dient als Orientierung; eigene Layouts sind möglich.</p>
+      <p data-i18n="guideDeadlines"><strong>Abgabe:</strong> Thema und gewünschtes Format bitte frühzeitig anmelden. Die Fristen für finale Posterdateien (mit Zeitpuffer für den Druck) und Vortragsfolien werden noch bestätigt; Dateien müssen jetzt nicht hochgeladen werden.</p>
+      <p data-i18n="guideTalks"><strong>Forschungsbeiträge:</strong> WiMis von IPK und TU Berlin können Themen für Projektvorträge anmelden. Die endgültigen Vortragsslots werden im Programm abgestimmt.</p>
+    </div>
     <div class="rsvp-panel" id="registration">
       <h3 data-i18n="formTitle">Teilnahme anmelden</h3>
       <p class="rsvp-lede" data-i18n="formIntro">Kurze Rückmeldung für unsere Planung. Auch ohne eigenen Beitrag kannst du teilnehmen.</p>
@@ -97,14 +106,30 @@
           <option value="professor" data-i18n="roleProfessor">Professor/in</option>
           <option value="wimi" data-i18n="roleWimi">WiMi / Wissenschaftliche/r Mitarbeiter/in</option>
           <option value="hiwi" data-i18n="roleHiwi">HiWi / Studentische Hilfskraft</option>
+          <option value="student" data-i18n="roleStudent">Student/in (Bachelor/Master)</option>
           <option value="intern" data-i18n="roleIntern">Praktikant/in</option>
           <option value="admin" data-i18n="roleAdmin">Verwaltung</option>
           <option value="other" data-i18n="roleOther">Sonstiges</option>
         </select></div>
-        <fieldset><legend class="field-legend" data-i18n="formContribution">Ich möchte einen Beitrag einreichen (optional)</legend>
-          <div class="choice-row"><label class="choice"><input type="checkbox" name="contribution" value="poster"><span data-i18n="formPoster">Poster / Demo</span></label><label class="choice"><input type="checkbox" name="contribution" value="talk"><span data-i18n="formTalk">Präsentation / Vortrag</span></label></div>
+        <div class="form-field"><label for="rsvp-affiliation" data-i18n="formAffiliation">Abteilung / Zugehörigkeit *</label><select id="rsvp-affiliation" name="affiliation" required>
+          <option value="" data-i18n="affiliationPlaceholder">Bitte auswählen</option>
+          <option value="oe410">Fraunhofer IPK · OE410</option>
+          <option value="oe420">Fraunhofer IPK · OE420</option>
+          <option value="tu">TU Berlin</option>
+          <option value="other" data-i18n="affiliationOther">Sonstiges (bitte unten angeben)</option>
+        </select></div>
+        <fieldset><legend class="field-legend" data-i18n="formContribution">Ich möchte einen Beitrag anmelden (optional)</legend>
+          <div class="choice-row">
+            <label class="choice"><input type="checkbox" name="contribution" value="poster"><span data-i18n="formPoster">Poster (A2)</span></label>
+            <label class="choice"><input type="checkbox" name="contribution" value="demo"><span data-i18n="formDemo">Demo / Demonstrator</span></label>
+            <label class="choice"><input type="checkbox" name="contribution" value="talk"><span data-i18n="formTalk">Präsentation / Vortrag</span></label>
+          </div>
+          <p class="form-hint" data-i18n="formFormatHint">Mehrfachauswahl möglich. Bei einem Beitrag bitte das Thema im folgenden Feld angeben; Studierende sollten Thema und Format vorher mit ihrer Betreuung abstimmen.</p>
         </fieldset>
-        <div class="form-field"><label for="rsvp-details" data-i18n="formDetails">Weitere Angaben (z. B. Thema des Posters oder Vortrags)</label><textarea id="rsvp-details" name="details" maxlength="1200" data-i18n-placeholder="formDetailsPlaceholder" placeholder="Kurze Beschreibung des geplanten Beitrags oder weitere Hinweise …"></textarea></div>
+        <div class="form-field contribution-topic" data-contribution-field="poster" hidden><label for="rsvp-poster-topic" data-i18n="formPosterTopic">Posterthema / Arbeitstitel *</label><input id="rsvp-poster-topic" name="posterTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
+        <div class="form-field contribution-topic" data-contribution-field="demo" hidden><label for="rsvp-demo-topic" data-i18n="formDemoTopic">Thema der Demo / Kurzbeschreibung *</label><input id="rsvp-demo-topic" name="demoTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
+        <div class="form-field contribution-topic" data-contribution-field="talk" hidden><label for="rsvp-talk-topic" data-i18n="formTalkTopic">Vortragsthema / Arbeitstitel *</label><input id="rsvp-talk-topic" name="talkTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
+        <div class="form-field"><label for="rsvp-details" data-i18n="formDetails">Weitere Angaben (z. B. Betreuer/in, Team oder besondere Anforderungen)</label><textarea id="rsvp-details" name="details" maxlength="1200" data-i18n-placeholder="formDetailsPlaceholder" placeholder="Optional: Betreuer/in, zusätzliche Informationen oder Hinweise …"></textarea></div>
         <p class="form-note" data-i18n="formPrivacy">Diese Website speichert keine Antworten. Beim Klicken auf „E-Mail vorbereiten“ wird eine vorausgefüllte Nachricht in deinem E-Mail-Programm geöffnet. Bitte diese anschließend selbst absenden. Alternativ kannst du die Angaben kopieren.</p>
         <div class="form-actions"><button class="form-btn" type="submit" data-i18n="formSend">E-Mail vorbereiten</button><button class="form-btn secondary" type="button" id="copy-registration" data-i18n="formCopy">Angaben kopieren</button></div>
         <div class="form-status" id="form-status" aria-live="polite" role="status"></div>
@@ -141,20 +166,26 @@
     c3Title:'Visualize',c3Body:'Sketch an architecture, workflow, or system concept.',c4Title:'Present',c4Body:'Pitch your team’s concept to the other participants.',
     deliverable:'<strong>Outcome:</strong> a visual solution concept (e.g. on A3 paper) and a short pitch. Groups will mix disciplines and experience levels; students are particularly encouraged to present.',
     challengeNote:'Case studies and group allocations will follow. This is a collaborative exercise, not a coding competition.',
-    contributeTitle:'Participation & contributions',contributeLead:'Let us know whether you plan to attend and whether you would like to contribute a poster or presentation. Further details and deadlines will be shared internally.',
+    contributeTitle:'Participation & contributions',contributeLead:'Let us know if you plan to attend and whether you would like to contribute a poster, demo, or research talk. Register your topic and preferred format early; final-material deadlines will be announced.',
     talkTitle:'Research talks',talkBody:'For research staff. Six concise presentations on current or upcoming research topics are planned, with time for questions.',
-    postersTitle:'Posters & demos',postersBody:'For students and student assistants. Small posters or practical demonstrations, with time for discussions and visiting one another’s work.',
+    postersTitle:'Posters & demos',postersBody:'For students and student assistants. A2 posters or short demonstrations. Please coordinate your topic and chosen format with your supervisor beforehand.',
+    guidePoster:'<strong>Poster guidance:</strong> A2 format, informative images and bullet points rather than long text. Focus on research content, not project administration. As last year, include a short profile with your name and photograph. The poster template is a suggestion; custom layouts are welcome.',
+    guideDeadlines:'<strong>Submissions:</strong> Register your topic and preferred format early. Deadlines for final poster files (allowing time for printing) and presentation slides are still to be confirmed. No files need to be uploaded now.',
+    guideTalks:'<strong>Research contributions:</strong> Researchers from Fraunhofer IPK and TU Berlin may propose project talks. Final talk slots will be coordinated as part of the program.',
     formTitle:'Register your participation',formIntro:'A quick response helps us plan. You can attend without presenting anything.',
     formName:'Name *',formEmail:'Email address *',formAttendance:'I will attend Lab Day *',formYes:'Yes',formNo:'No',
-    formRole:'My role *',rolePlaceholder:'Please select',roleProfessor:'Professor',roleWimi:'Research staff (WiMi)',roleHiwi:'Student assistant (HiWi)',roleIntern:'Intern',roleAdmin:'Administrative staff',roleOther:'Other',
-    formContribution:'I would like to contribute (optional)',formPoster:'Poster / Demo',formTalk:'Presentation / Talk',
-    formDetails:'Additional details (e.g. poster or talk topic)',formDetailsPlaceholder:'Short description of your proposed contribution or other notes …',
+    formRole:'My role *',rolePlaceholder:'Please select',roleProfessor:'Professor',roleWimi:'Research staff (WiMi)',roleHiwi:'Student assistant (HiWi)',roleStudent:'Student (Bachelor/Master)',roleIntern:'Intern',roleAdmin:'Administrative staff',roleOther:'Other',
+    formAffiliation:'Department / affiliation *',affiliationPlaceholder:'Please select',affiliationOther:'Other (please specify below)',
+    formContribution:'I would like to propose a contribution (optional)',formPoster:'Poster (A2)',formDemo:'Demo / Demonstrator',formTalk:'Presentation / Talk',
+    formFormatHint:'Select multiple formats if applicable. A topic/title is required for each contribution. Students should coordinate the topic and format with their supervisor beforehand.',
+    formPosterTopic:'Poster topic / provisional title *',formDemoTopic:'Demo topic / short description *',formTalkTopic:'Talk topic / provisional title *',formTopicPlaceholder:'Provisional title or topic',
+    formDetails:'Additional details (e.g. supervisor, team, special requirements)',formDetailsPlaceholder:'Optional: supervisor, additional information, or notes …',
     formPrivacy:'This website does not store responses. “Prepare email” opens your email app with a prefilled message. Please review and send it yourself. Alternatively, copy your answers.',
     formSend:'Prepare email',formCopy:'Copy my answers',
     footerText:'A joint internal research day of Fraunhofer IPK and TU Berlin.',footerStatus:'Informal event page · Program subject to change'
   };
   const de={};document.querySelectorAll('[data-i18n]').forEach(el=>{de[el.dataset.i18n]=el.innerHTML});
-  const apply=(lang)=>{const dict=lang==='en'?en:de;document.querySelectorAll('[data-i18n]').forEach(el=>{if(Object.prototype.hasOwnProperty.call(dict,el.dataset.i18n))el.innerHTML=dict[el.dataset.i18n]});document.documentElement.lang=lang;document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const key=el.dataset.i18nPlaceholder;el.placeholder=lang==='en'?(en[key]||''):'Kurze Beschreibung des geplanten Beitrags oder weitere Hinweise …'});document.querySelectorAll('[data-lang]').forEach(el=>{el.setAttribute('aria-pressed',String(el.dataset.lang===lang))});try{localStorage.setItem('aut-labday-lang',lang)}catch(e){}};
+  const apply=(lang)=>{const dict=lang==='en'?en:de;document.querySelectorAll('[data-i18n]').forEach(el=>{if(Object.prototype.hasOwnProperty.call(dict,el.dataset.i18n))el.innerHTML=dict[el.dataset.i18n]});document.documentElement.lang=lang;document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const key=el.dataset.i18nPlaceholder;el.placeholder=lang==='en'?(en[key]||''):(key==='formTopicPlaceholder'?'Vorläufiger Titel oder Thema':'Optional: Betreuer/in, zusätzliche Informationen oder Hinweise …')});document.querySelectorAll('[data-lang]').forEach(el=>{el.setAttribute('aria-pressed',String(el.dataset.lang===lang))});try{localStorage.setItem('aut-labday-lang',lang)}catch(e){}};
   document.querySelectorAll('[data-lang]').forEach(el=>el.addEventListener('click',()=>apply(el.dataset.lang)));
   // GitHub Pages is static. Registration is submitted by the visitor's own email client.
   // Change this address if a dedicated Lab Day mailbox or Google Form becomes available.
@@ -162,17 +193,34 @@
   const rsvpForm=document.getElementById('rsvp-form');
   const formStatus=document.getElementById('form-status');
   const labels={
-    de:{yes:'Ja',no:'Nein',none:'Kein Beitrag',poster:'Poster / Demo',talk:'Präsentation / Vortrag',role:{professor:'Professor/in',wimi:'WiMi',hiwi:'HiWi',intern:'Praktikant/in',admin:'Verwaltung',other:'Sonstiges'}},
-    en:{yes:'Yes',no:'No',none:'No contribution',poster:'Poster / Demo',talk:'Presentation / Talk',role:{professor:'Professor',wimi:'Research staff (WiMi)',hiwi:'Student assistant (HiWi)',intern:'Intern',admin:'Administrative staff',other:'Other'}}
+    de:{yes:'Ja',no:'Nein',none:'Kein Beitrag',poster:'Poster (A2)',demo:'Demo / Demonstrator',talk:'Präsentation / Vortrag',role:{professor:'Professor/in',wimi:'WiMi',hiwi:'HiWi',student:'Studierende/r',intern:'Praktikant/in',admin:'Verwaltung',other:'Sonstiges'},affiliation:{oe410:'Fraunhofer IPK · OE410',oe420:'Fraunhofer IPK · OE420',tu:'TU Berlin',other:'Sonstiges'}},
+    en:{yes:'Yes',no:'No',none:'No contribution',poster:'Poster (A2)',demo:'Demo / Demonstrator',talk:'Presentation / Talk',role:{professor:'Professor',wimi:'Research staff (WiMi)',hiwi:'Student assistant (HiWi)',student:'Student (Bachelor/Master)',intern:'Intern',admin:'Administrative staff',other:'Other'},affiliation:{oe410:'Fraunhofer IPK · OE410',oe420:'Fraunhofer IPK · OE420',tu:'TU Berlin',other:'Other'}}
   };
+  function syncContributionFields(){
+    document.querySelectorAll('[data-contribution-field]').forEach(section=>{
+      const kind=section.dataset.contributionField;
+      const selected=!!rsvpForm.querySelector('input[name="contribution"][value="'+kind+'"]:checked');
+      section.hidden=!selected;
+      const topic=section.querySelector('input');
+      topic.required=selected;
+    });
+  }
+  rsvpForm.querySelectorAll('input[name="contribution"]').forEach(input=>input.addEventListener('change',syncContributionFields));
+  syncContributionFields();
   function getRegistration(){
+    syncContributionFields();
     if(!rsvpForm.reportValidity())return null;
     const formData=new FormData(rsvpForm),lang=document.documentElement.lang==='en'?'en':'de',dict=labels[lang];
     const kinds=formData.getAll('contribution');
     const contribution=kinds.length?kinds.map(x=>dict[x]).join(', '):dict.none;
+    const topics=kinds.map(kind=>{
+      const label=kind==='poster'?(lang==='en'?'Poster topic':'Posterthema'):kind==='demo'?(lang==='en'?'Demo topic':'Demo-Thema'):(lang==='en'?'Talk topic':'Vortragsthema');
+      return label+': '+(formData.get(kind+'Topic')||'—');
+    });
+    const affiliation=dict.affiliation[formData.get('affiliation')]||formData.get('affiliation');
     const lines=lang==='en'?
-      ['AUT Lab Day 2026 – Participation','',`Name: ${formData.get('name')}`,`Email: ${formData.get('email')}`,`I will attend: ${dict[formData.get('attendance')]}`,`Role: ${dict.role[formData.get('role')]}`,`Contribution: ${contribution}`,`Details: ${formData.get('details')||'—'}`]:
-      ['AUT Lab Day 2026 – Teilnahme','',`Name: ${formData.get('name')}`,`E-Mail: ${formData.get('email')}`,`Teilnahme: ${dict[formData.get('attendance')]}`,`Rolle: ${dict.role[formData.get('role')]}`,`Beitrag: ${contribution}`,`Details: ${formData.get('details')||'—'}`];
+      ['AUT Lab Day 2026 – Participation','',`Name: ${formData.get('name')}`,`Email: ${formData.get('email')}`,`I will attend: ${dict[formData.get('attendance')]}`,`Role: ${dict.role[formData.get('role')]}`,`Department / affiliation: ${affiliation}`,`Contribution format(s): ${contribution}`,...topics,`Additional details: ${formData.get('details')||'—'}`]:
+      ['AUT Lab Day 2026 – Teilnahme','',`Name: ${formData.get('name')}`,`E-Mail: ${formData.get('email')}`,`Teilnahme: ${dict[formData.get('attendance')]}`,`Rolle: ${dict.role[formData.get('role')]}`,`Abteilung / Zugehörigkeit: ${affiliation}`,`Beitragsformat(e): ${contribution}`,...topics,`Weitere Angaben: ${formData.get('details')||'—'}`];
     return {subject:(lang==='en'?'Lab Day 2026 participation: ':'Lab Day 2026 Teilnahme: ')+formData.get('name'),body:lines.join('\n')};
   }
   rsvpForm.addEventListener('submit',e=>{
