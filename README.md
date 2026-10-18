@@ -21,7 +21,7 @@ GitHub Pages must be enabled in repository settings for the site to go live.
 
 GitHub Pages has no backend to receive responses. The form therefore **does not send registrations from the site itself**. Clicking **E-Mail vorbereiten / Prepare email** opens the visitor's email program with a prefilled message to the organizer mailbox defined in `registrationEmail` in `index.html`. The visitor must send that message. A **Copy** button is available as a fallback. No RSVP data is stored on the website.
 
-The current configured destination is `chavan@campus.tu-berlin.de`, drawn from the organizer's previously provided university contact information. **Confirm or replace this address before distributing registration instructions.** For a centralized spreadsheet and more convenient mobile registration, create a Google Form (or approved institutional form), then link to it from this section. Do not publish a fake/placeholder Google Form URL.
+The current configured destination is `vivek.chavan@ipk.fraunhofer.de`, drawn from the organizer's previously provided university contact information. **Confirm or replace this address before distributing registration instructions.** For a centralized spreadsheet and more convenient mobile registration, create a Google Form (or approved institutional form), then link to it from this section. Do not publish a fake/placeholder Google Form URL.
 
 ## Institutional logos / branding
 
