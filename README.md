@@ -15,13 +15,16 @@ GitHub Pages must be enabled in repository settings for the site to go live.
 - Every editable bilingual content element has a `data-i18n` key.
 - Dates, venues, research-talk allocations, and challenge details are provisional and should be confirmed before public invitations.
 - Past editions and the archive have been removed until approved archival content is actually available.
-- The RSVP form is located under the `Teilnahme & Beiträge` section. It is bilingual, with fields for name, email, attendance, role, poster/talk contribution and details.
+- The RSVP form is under `Teilnahme & Beiträge`. It is bilingual, with name, email, attendance, role (including student, intern, administration), affiliation (OE410/OE420/TU Berlin/other), separate poster/demo/talk options, mandatory proposed topic/title for every selected contribution, and optional additional details.
+- The form asks for **proposed** contributions only: final presentation slots and materials are coordinated separately.
+- Students are asked to coordinate topic and format with their supervisor. Poster guidance reflects 2025 practice: A2 posters, a short personal profile with name and photo, visuals and bullet points, research content rather than administrative detail, flexible template. A printed poster/demo or slide file is **not** uploaded in this sign-up form.
+- The 2025 submission deadlines were Oct 31 (topic/format) and Nov 28 (final posters/slides). They are **not automatically carried over into 2026**; the public page says 2026 deadlines remain to be confirmed. For 2026 planning, consider Friday Oct 30 and Friday Nov 27 rather than the weekend dates.
 
 ## Registration form
 
 GitHub Pages has no backend to receive responses. The form therefore **does not send registrations from the site itself**. Clicking **E-Mail vorbereiten / Prepare email** opens the visitor's email program with a prefilled message to the organizer mailbox defined in `registrationEmail` in `index.html`. The visitor must send that message. A **Copy** button is available as a fallback. No RSVP data is stored on the website.
 
-The current configured destination is `vivek.chavan@ipk.fraunhofer.de`, drawn from the organizer's previously provided university contact information. **Confirm or replace this address before distributing registration instructions.** For a centralized spreadsheet and more convenient mobile registration, create a Google Form (or approved institutional form), then link to it from this section. Do not publish a fake/placeholder Google Form URL.
+The configured destination is `vivek.chavan@ipk.fraunhofer.de`, as explicitly specified by the organizer. For a centralized spreadsheet and more convenient mobile registration, create a Google Form (or approved institutional form), then link to it from this section. Do not publish a fake/placeholder Google Form URL.
 
 ## Institutional logos / branding
 
