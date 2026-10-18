@@ -26,6 +26,11 @@
     .choice{font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.choice input{accent-color:var(--green);width:17px;height:17px;margin:0}
     .form-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:4px}.form-btn{border:1px solid var(--green-dark);background:var(--green-dark);color:#fff;border-radius:3px;padding:11px 16px;font-weight:650;cursor:pointer}.form-btn:hover{background:#11705b;color:#fff}.form-btn.secondary{background:#fff;color:var(--green-dark)}.form-btn.secondary:hover{background:var(--soft)}
     .form-note{font-size:12px;color:var(--muted);max-width:760px}.form-status{font-size:13px;color:var(--green-dark);min-height:1.3em}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:30px}.fact{padding:22px;background:var(--paper)}.fact strong{display:block;font-size:12px;letter-spacing:.06em;color:var(--green-dark);text-transform:uppercase;margin-bottom:7px}.fact p{margin:0;font-size:14px;color:#415156}
+    .role-tabs{display:flex;gap:6px;border-bottom:1px solid var(--rule);margin:29px 0 0}.role-tab{padding:12px 21px;background:transparent;color:var(--muted);border:0;border-bottom:3px solid transparent;font-weight:650;cursor:pointer}.role-tab[aria-selected="true"]{color:var(--green-dark);border-bottom-color:var(--green)}.role-panel{padding:27px 0 8px}.role-panel[hidden]{display:none}.instructions-list{padding-left:23px;color:#415156;line-height:1.75;max-width:850px}.instructions-list li{margin-bottom:10px}.instructions-list strong{color:var(--ink)}
+    .deadline-box{display:flex;flex-wrap:wrap;gap:10px 28px;background:var(--soft);padding:16px 20px;border-left:3px solid var(--green);margin-top:17px}.deadline-box span{font-size:13px;color:#425054}.deadline-box b{color:var(--ink)}
+    .download-link{display:inline-flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid var(--green-dark);border-radius:3px;background:var(--green-dark);color:#fff;text-decoration:none;font-size:13px;font-weight:700;margin-top:12px}.download-link:hover{background:var(--green);color:#fff}.template-status{display:inline-block;font-size:13px;color:var(--muted);padding:12px 0}
+    @media(max-width:650px){.facts{grid-template-columns:1fr}.role-tab{flex:1;padding:12px 9px;font-size:13px}}
     .form-field[hidden],.contribution-topic[hidden]{display:none}
     .form-hint{font-size:12px;color:var(--muted);line-height:1.55;margin:2px 0 0}
     .participation-guidance{margin-top:21px;padding:18px 20px;background:var(--soft);border-left:3px solid var(--green);font-size:13px;line-height:1.6;color:#40554d}
@@ -38,7 +43,7 @@
 <header class="header"><div class="container header-inner">
   <a class="wordmark" href="#top" aria-label="AUT Lab Day Homepage"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>AUT LAB DAY <span style="color:var(--green)">2026</span></span></a>
   <div class="header-right">
-    <nav class="nav" aria-label="Hauptnavigation"><a href="#about" data-i18n="navAbout">Überblick</a><a href="#program" data-i18n="navProgram">Programm</a><a href="#challenge" data-i18n="navChallenge">Challenge</a><a href="#participate" data-i18n="navParticipate">Anmeldung</a></nav>
+    <nav class="nav" aria-label="Hauptnavigation"><a href="#about" data-i18n="navAbout">Überblick</a><a href="#program" data-i18n="navProgram">Programm</a><a href="#challenge" data-i18n="navChallenge">Challenge</a><a href="#instructions" data-i18n="navInstructions">Infos für Beiträge</a><a href="#participate" data-i18n="navParticipate">Anmeldung</a></nav>
     <div class="language" role="group" aria-label="Language / Sprache"><button type="button" class="lang" data-lang="de" aria-pressed="true">DE</button><button type="button" class="lang" data-lang="en" aria-pressed="false">EN</button></div>
   </div>
 </div></header>
@@ -48,7 +53,7 @@
     <h1>AUT Lab Day <span>2026</span></h1>
     <p class="tagline" data-i18n="heroTitle">Industrielle Automatisierung im Wandel: Perspektiven, Forschung und gemeinsame Lösungen.</p>
     <p class="intro" data-i18n="heroIntro">Ein gemeinsamer Forschungstag der Fraunhofer-IPK-Abteilungen und des Fachgebiets Industrielle Automatisierungstechnik der TU Berlin. Mit einer wissenschaftlichen Keynote, Projektvorträgen, studentischen Postern und einer interaktiven Industrial Automation Challenge.</p>
-    <div class="meta"><span><i class="dot"></i><strong data-i18n="date">Donnerstag, 10. Dezember 2026</strong></span><span data-i18n="location">PTZ Berlin · Räume werden bekanntgegeben</span><span data-i18n="attendance">Für Mitarbeitende und Studierende der beteiligten Gruppen</span></div>
+    <div class="meta"><span><i class="dot"></i><strong data-i18n="date">Donnerstag, 10. Dezember 2026</strong></span><span data-i18n="location">PTZ Berlin · Vorträge vsl. PTZ 001</span><span data-i18n="attendance">Für Mitarbeitende und Studierende der beteiligten Gruppen</span></div>
     <small class="softnote" data-i18n="tentative">Datum, Räume und Programmdetails sind vorläufig. Die Keynote-Zusage liegt vor; der Titel folgt.</small>
     <div class="partners" aria-label="Organisierende Institutionen"><span class="partners-label" data-i18n="withPartners">Mit Beteiligung von</span>
       <a class="partner" href="https://www.ipk.fraunhofer.de/" target="_blank" rel="noopener noreferrer" aria-label="Fraunhofer IPK"><img class="partner-logo fraun" alt="Fraunhofer Logo" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fraunhofer-logo.svg" onerror="this.hidden=true"><span class="logo-fallback">Fraunhofer</span><span class="partner-sub">IPK</span></a>
@@ -58,13 +63,19 @@
   </div></div>
   <section id="about"><div class="container"><div class="section-head"><span class="section-index">01</span><h2 data-i18n="aboutTitle">Ein Tag. Drei Perspektiven.</h2></div>
     <p class="lede" data-i18n="aboutLead">Der Lab Day bietet Raum für Austausch über laufende Forschung und neue Ideen. Die diesjährige Ausgabe verbindet wissenschaftliche Perspektiven mit dem Wissen aus unseren Projekten und einer gemeinsamen Designaufgabe.</p>
+    <div class="facts">
+      <div class="fact"><strong data-i18n="faqWhat">Was ist der Lab Day?</strong><p data-i18n="faqWhatBody">Eine interne Forschungskonferenz zum Austausch über laufende Projekte, Methoden und neue Ideen.</p></div>
+      <div class="fact"><strong data-i18n="faqWho">Wer nimmt teil?</strong><p data-i18n="faqWhoBody">Mitarbeitende und Studierende der Fraunhofer-IPK-Abteilungen OE410/OE420 und des Fachgebiets Industrielle Automatisierungstechnik der TU Berlin.</p></div>
+      <div class="fact"><strong data-i18n="faqWhere">Wo findet er statt?</strong><p data-i18n="faqWhereBody">Wie 2025 voraussichtlich am PTZ: Vorträge im kleinen Hörsaal <b>PTZ 001</b>, Poster im Bereich <b>Versuchshalle / Hallengang</b>. Bereichssitzung bislang in Raum 457. Der Raum für die Challenge folgt; alle Raumangaben unter Vorbehalt.</p></div>
+      <div class="fact"><strong data-i18n="faqWhy">Warum?</strong><p data-i18n="faqWhyBody">Forschung und Kompetenzen der Gruppen kennenlernen, Ideen austauschen und neue Zusammenarbeit anstoßen.</p></div>
+    </div>
     <div class="three"><article class="concept"><small>01 / KEYNOTE</small><h3 data-i18n="p1Title">Perspektiven</h3><p data-i18n="p1Body">Prof. Dr.-Ing. Jörg Krüger eröffnet den Forschungstag mit einer fachlichen Keynote. Der genaue Titel und Schwerpunkt werden noch bekanntgegeben.</p></article>
     <article class="concept"><small>02 / RESEARCH</small><h3 data-i18n="p2Title">Forschung</h3><p data-i18n="p2Body">Wissenschaftliche Mitarbeitende zeigen aktuelle Projekte. Studierende stellen Ergebnisse als Poster oder Demonstratoren vor.</p></article>
     <article class="concept"><small>03 / COLLABORATION</small><h3 data-i18n="p3Title">Gemeinsame Lösungen</h3><p data-i18n="p3Body">In gemischten Teams entstehen Ideen für reale Herausforderungen der industriellen Automatisierung – vom Anforderungsprofil bis zum Lösungskonzept.</p></article></div>
   </div></section>
   <section id="program"><div class="container"><div class="program-head"><div class="section-head"><span class="section-index">02</span><h2 data-i18n="programTitle">Vorläufiges Programm</h2></div><span class="stamp" data-i18n="programNote">Änderungen vorbehalten · Stand Oktober 2026</span></div>
     <div class="schedule">
-      <div class="event break"><span class="time">09:30 – 10:30</span><span class="event-name" data-i18n="s0">Bereichssitzung<span class="detail">Für wissenschaftliche Mitarbeitende; vorbehaltlich Bestätigung</span></span></div>
+      <div class="event break"><span class="time">09:30 – 10:30</span><span class="event-name" data-i18n="s0">Bereichssitzung<span class="detail">Für wissenschaftliche Mitarbeitende · voraussichtlich Raum 457; unter Vorbehalt</span></span></div>
       <div class="event break"><span class="time">10:30 – 10:45</span><span class="event-name" data-i18n="s1">Pause / Ankommen</span></div>
       <div class="event highlight"><span class="time">10:45 – 11:15</span><span class="event-name" data-i18n="s2">Eröffnungskeynote · Prof. Dr.-Ing. Jörg Krüger<span class="detail">20 Minuten Vortrag + 10 Minuten Diskussion · Vortragstitel folgt</span></span><span class="pill" data-i18n="confirmed">Zusage liegt vor</span></div>
       <div class="event"><span class="time">11:15 – 12:00</span><span class="event-name" data-i18n="s3">Projektvorträge I<span class="detail">Drei Forschungsbeiträge · je 15 Minuten inkl. Diskussion</span></span></div>
@@ -83,7 +94,7 @@
       <p class="note" data-i18n="challengeNote">Konkrete Fallstudien und Gruppeneinteilung folgen. Die Challenge ist als kollaborative Übung geplant, nicht als Programmierwettbewerb.</p>
     </div>
   </div></section>
-  <section id="participate"><div class="container"><div class="section-head"><span class="section-index">04</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Sag uns, ob du teilnehmen möchtest und ob du einen Poster-, Demo- oder Vortragsbeitrag planst. Bitte melde Thema und Format frühzeitig an; die Abgabefristen für die finalen Materialien werden noch bekanntgegeben.</p>
+  <section id="participate"><div class="container"><div class="section-head"><span class="section-index">05</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Sag uns, ob du teilnehmen möchtest und ob du einen Poster-, Demo- oder Vortragsbeitrag planst. Bitte melde Thema und Format frühzeitig an; die Abgabefristen für die finalen Materialien werden noch bekanntgegeben.</p>
     <div class="contribution-grid"><article class="contribution"><h3 data-i18n="talkTitle">Projektvorträge</h3><p data-i18n="talkBody">Für wissenschaftliche Mitarbeitende. Geplant sind sechs kompakte Präsentationen zu laufenden oder zukünftigen Forschungsthemen mit anschließenden Fragen.</p></article><article class="contribution"><h3 data-i18n="postersTitle">Poster & Demos</h3><p data-i18n="postersBody">Für Studierende und studentische Mitarbeitende. Poster im A2-Format oder kurze Demonstrationen. Bitte stimme Thema und Format vorher mit deiner Betreuungsperson ab.</p></article></div>
     <div class="participation-guidance">
       <p data-i18n="guidePoster"><strong>Hinweise für Poster:</strong> A2-Format, aussagekräftige Bilder und Stichpunkte statt langer Texte. Die fachliche Arbeit steht im Mittelpunkt, nicht organisatorische Projektdetails. Wie im Vorjahr sollte ein kurzer Steckbrief mit Name und Profilbild enthalten sein. Die Postervorlage dient als Orientierung; eigene Layouts sind möglich.</p>
@@ -143,17 +154,21 @@
 (function(){
   'use strict';
   const en={
-    skip:'Skip to content',navAbout:'Overview',navProgram:'Program',navChallenge:'Challenge',navParticipate:'Participate',
+    skip:'Skip to content',navAbout:'Overview',navProgram:'Program',navChallenge:'Challenge',navInstructions:'Guidelines',navParticipate:'Participate',
     eyebrow:'Internal research workshop · Berlin',heroTitle:'Industrial automation in transition: perspectives, research, and collaborative solutions.',
     heroIntro:'A joint research day for participating Fraunhofer IPK departments and the Chair of Industrial Automation Technology at TU Berlin. Featuring a scientific keynote, project talks, student posters, and an interactive Industrial Automation Challenge.',
-    date:'Thursday, 10 December 2026',location:'PTZ Berlin · Rooms to be announced',attendance:'For researchers, staff and students of the participating groups',
+    date:'Thursday, 10 December 2026',location:'PTZ Berlin · Talks expected in PTZ 001',attendance:'For researchers, staff and students of the participating groups',
     tentative:'Date, rooms and program details are provisional. The keynote is confirmed; its title will be announced.',withPartners:'With participation from',
     aboutTitle:'One day. Three perspectives.',aboutLead:'Lab Day creates space to exchange ongoing research and new ideas. This edition combines a scientific perspective, the expertise developed in our projects, and a collaborative design challenge.',
+    faqWhat:'What is Lab Day?',faqWhatBody:'An internal research conference for sharing ongoing projects, methods, and ideas.',
+    faqWho:'Who attends?',faqWhoBody:'Researchers, staff, and students from Fraunhofer IPK departments OE410/OE420 and the Chair of Industrial Automation Technology at TU Berlin.',
+    faqWhere:'Where?',faqWhereBody:'As in 2025, likely at PTZ: talks in lecture hall <b>PTZ 001</b>, posters in the <b>experimental hall / hall corridor</b>. The department meeting was previously in room 457. The challenge room will be confirmed. All locations are provisional.',
+    faqWhy:'Why?',faqWhyBody:'Learn about research and expertise across groups, exchange ideas and initiate future collaborations.',
     p1Title:'Perspectives',p1Body:'Prof. Dr.-Ing. Jörg Krüger will open the day with a scientific keynote. The final title and focus will be announced later.',
     p2Title:'Research',p2Body:'Researchers present current projects. Students share their findings through posters and demonstrations.',
     p3Title:'Collaborative solutions',p3Body:'Mixed teams develop ideas for realistic industrial automation challenges, from requirements to system concepts.',
     programTitle:'Preliminary program',programNote:'Subject to change · October 2026',
-    s0:'Department meeting<span class="detail">For research staff; subject to confirmation</span>',s1:'Break / arrivals',
+    s0:'Department meeting<span class="detail">For research staff · expected in room 457; subject to confirmation</span>',s1:'Break / arrivals',
     s2:'Opening keynote · Prof. Dr.-Ing. Jörg Krüger<span class="detail">20-minute talk + 10-minute discussion · Title to be announced</span>',confirmed:'Confirmed',
     s3:'Research Talks I<span class="detail">Three project presentations · 15 minutes each, including Q&A</span>',
     s4:'Lunch & Poster / Demo Session<span class="detail">Open poster exhibition · two presentation shifts for students</span>',
