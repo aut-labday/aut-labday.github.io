@@ -4,9 +4,9 @@ A lightweight, static, bilingual (German-first) workshop website for Fraunhofer 
 
 ## Deployment at the root URL
 
-The public repository **`aut-labday/aut-labday.github.io`** is created and the website files are committed to the default branch (`main`). Go to **Settings → Pages → Build and deployment** and select **Deploy from a branch**, `main`, `/(root)`. The resulting URL is **https://aut-labday.github.io/**.
+This repository is published under **https://aut-labday.github.io/**. In **Settings → Pages → Build and deployment**, use **Deploy from a branch**, `main`, `/(root)`.
 
-GitHub organization ownership alone does not create or publish the site. A repository and Pages setting are required.
+GitHub Pages must be enabled in repository settings for the site to go live.
 
 ## Editing
 
@@ -14,7 +14,14 @@ GitHub organization ownership alone does not create or publish the site. A repos
 - German is the default HTML; English strings live in the `en` object near the end of the file.
 - Every editable bilingual content element has a `data-i18n` key.
 - Dates, venues, research-talk allocations, and challenge details are provisional and should be confirmed before public invitations.
-- The archived 2025 edition is only a placeholder; no private slides or posters are published.
+- Past editions and the archive have been removed until approved archival content is actually available.
+- The RSVP form is located under the `Teilnahme & Beiträge` section. It is bilingual, with fields for name, email, attendance, role, poster/talk contribution and details.
+
+## Registration form
+
+GitHub Pages has no backend to receive responses. The form therefore **does not send registrations from the site itself**. Clicking **E-Mail vorbereiten / Prepare email** opens the visitor's email program with a prefilled message to the organizer mailbox defined in `registrationEmail` in `index.html`. The visitor must send that message. A **Copy** button is available as a fallback. No RSVP data is stored on the website.
+
+The current configured destination is `chavan@campus.tu-berlin.de`, drawn from the organizer's previously provided university contact information. **Confirm or replace this address before distributing registration instructions.** For a centralized spreadsheet and more convenient mobile registration, create a Google Form (or approved institutional form), then link to it from this section. Do not publish a fake/placeholder Google Form URL.
 
 ## Institutional logos / branding
 
@@ -26,8 +33,8 @@ These files are not redistributed in this repo. The respective institutions' tra
 
 ## Security
 
-This is a public static site. Do not add confidential research material, unpublished presentations, personal contact information, or private attendee lists. If such information is needed, link to an authorized internal platform.
+This is a public static site. Do not add confidential research material, unpublished presentations, or private attendee lists. If such information is needed, link to an authorized internal platform.
 
 ## Technology
 
-No framework, third-party JavaScript, cookies, analytics, web fonts, or build step. JavaScript is used only for the language switch; first-time visitors see German. Content and layout work without JavaScript.
+No framework, third-party JavaScript, cookies, analytics, web fonts, or build step. JavaScript is used for the language switch and to prefill a mailto message or copy answers; first-time visitors see German. Content and layout work without JavaScript.
