@@ -29,7 +29,7 @@ The public site has a **FAQ** based on the 2025 info deck and separate bilingual
 - WiMi / researchers: **10-minute project talk + 5-minute discussion**, content emphasizing current/future projects and collaboration across the IPK departments and TU Berlin. Talk slots require coordination with the responsible group leadership.
 - **Proposed, not confirmed 2026 dates:** Friday **30 October** for registering name/topic/format, and Friday **27 November** for final posters/slides, based on the 2025 October 31 and November 28 deadlines. These are explicitly labeled provisional on the website.
 - The supplied **original A2 PowerPoint poster template** has seven layout slides. It is **not a WiMi talk slide template**.
-- **Binary download not yet deployed:** place the original file in `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx`. The site checks whether the file exists, then enables the `Download` link automatically; it otherwise shows a transparent pending message. The GitHub connector cannot upload binary PowerPoint bytes. The original file should be cleared for redistribution on a public site.
+- **Poster template download is active:** the original A2 PowerPoint has been uploaded to `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx` and is directly linked in the student instructions. Do not replace it without checking public redistribution approval.
 
 ## Registration form
 
