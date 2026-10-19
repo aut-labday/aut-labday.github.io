@@ -13,23 +13,29 @@ GitHub Pages must be enabled in repository settings for the site to go live.
 - All event wording is contained in `index.html`.
 - German is the default HTML; English strings live in the `en` object near the end of the file.
 - Every editable bilingual content element has a `data-i18n` key.
-- Dates, venues, research-talk allocations, and challenge details are provisional and should be confirmed before public invitations.
+- The date **10 December 2026** and two adjacent rooms **PWZ2/PWZ1** are booked. Time allocations, room functions, early departmental-meeting start, invited-talk length, final speakers and challenge details are **provisional**.
 - Past editions and the archive have been removed until approved archival content is actually available.
 - The RSVP form is under `Teilnahme & Beiträge`. It is bilingual, with name, email, attendance, role (including student, intern, administration), affiliation (OE410/OE420/TU Berlin/other), separate poster/demo/talk options, mandatory proposed topic/title for every selected contribution, and optional additional details.
 - The form asks for **proposed** contributions only: final presentation slots and materials are coordinated separately.
 - Students are asked to coordinate topic and format with their supervisor. Poster guidance reflects 2025 practice: A2 posters, a short personal profile with name and photo, visuals and bullet points, research content rather than administrative detail, flexible template. A printed poster/demo or slide file is **not** uploaded in this sign-up form.
-- The 2025 submission deadlines were Oct 31 (topic/format) and Nov 28 (final posters/slides). They are **not automatically carried over into 2026**; the public page says 2026 deadlines remain to be confirmed. For 2026 planning, consider Friday Oct 30 and Friday Nov 27 rather than the weekend dates.
+- The 2025 submission deadlines were October 31 (topic/format) and November 28 (final posters/slides). These are not copied as fixed 2026 deadlines. The website currently proposes **November 6** for provisional topics/formats, **November 27** for final print-ready A2 posters, and **December 4** for final presentation slides; these dates remain subject to confirmation.
 
 ## 2026 venue, instructions and materials
 
 The public site has a **FAQ** based on the 2025 info deck and separate bilingual, clickable **Studierende / HiWis** and **WiMis / Forschende** instruction tabs.
 
-- Expected venue (subject to confirmation for 2026): talk room **PTZ 001**; posters in **Versuchshalle / Hallengang**; department meeting previously room **457**. The team challenge room still needs to be assigned.
+- **Confirmed rooms:** adjacent **PWZ2** (larger, main talk/plenary space) and **PWZ1** (proposed posters/demos/breakout space) on December 10. The exact room usage, poster displays and ability to move walls are unconfirmed.
 - Student poster / demo: **A2 portrait poster**, optionally a short demo, coordinate topic/format with the supervisor, a profile with name and photo, clear images and bullet points rather than long text. A poster template is optional.
-- WiMi / researchers: **10-minute project talk + 5-minute discussion**, content emphasizing current/future projects and collaboration across the IPK departments and TU Berlin. Talk slots require coordination with the responsible group leadership.
-- **Proposed, not confirmed 2026 dates:** Friday **30 October** for registering name/topic/format, and Friday **27 November** for final posters/slides, based on the 2025 October 31 and November 28 deadlines. These are explicitly labeled provisional on the website.
+- WiMi / researchers: two **45-minute open presentation blocks** with volunteer expressions of interest first. The 2025 **10-minute talk + 5-minute discussion** serves as historical guidance, not a confirmed 2026 slot length. Number and duration of presentations to be finalized after registrations.
+- **Proposed, not confirmed 2026 dates:** Friday **November 6** for preliminary topics and formats; Friday **November 27** for final posters; Friday **December 4** for final research slides. Early registration is encouraged even before November 6.
 - The supplied **original A2 PowerPoint poster template** has seven layout slides. It is **not a WiMi talk slide template**.
 - **Poster template download is active:** the original A2 PowerPoint has been uploaded to `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx` and is directly linked in the student instructions. Do not replace it without checking public redistribution approval.
+
+## Provisional agenda
+
+The homepage currently proposes a **09:15–10:15** departmental meeting (early start not yet confirmed), **10:30–11:00** keynote from Prof. Jörg Krüger, two **45-minute** open research-talk blocks, Oli’s confirmed guest talk **“(Miss)Erfolgreich – Lektionen aus 13 Jahren Fraunhofer”** (25-minute slot proposed), **90 minutes** for combined lunch/posters/demos, **90 minutes** for the Industrial Automation Challenge and a **10-minute** closing quiz. The technical programme ends at **16:15**, allowing **45 minutes** before the Christmas gathering.
+
+The agenda is an invitation to register, not a fixed speaker allocation. Interested researchers can volunteer without knowing their final titles.
 
 ## Registration form
 
