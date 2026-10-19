@@ -13,7 +13,7 @@ GitHub Pages must be enabled in repository settings for the site to go live.
 - All event wording is contained in `index.html`.
 - German is the default HTML; English strings live in the `en` object near the end of the file.
 - Every editable bilingual content element has a `data-i18n` key.
-- The date **10 December 2026** and two adjacent rooms **PWZ2/PWZ1** are booked. The website lists both booked rooms for poster sessions and the challenge, while exact poster layout, start time of the departmental meeting, Oli's talk length, speaker allocation, deadlines and challenge scenario remain **provisional**.
+- The date **10 December 2026** and two adjacent rooms **PWZ2/PWZ1** are booked. The website lists both booked rooms for poster sessions and the challenge, while exact poster layout, start time of the departmental meeting, Oliver Heimann's talk length, speaker allocation, deadlines and challenge scenario remain **provisional**.
 - Past editions and the archive have been removed until approved archival content is actually available.
 - The RSVP form is under `Teilnahme & Beiträge`. It is bilingual, with name, email, attendance, role (including student, intern, administration), affiliation (OE410/OE420/TU Berlin/other), separate poster/demo/talk options, mandatory proposed topic/title for every selected contribution, and optional additional details.
 - The form asks for **proposed** contributions only: final presentation slots and materials are coordinated separately.
@@ -33,7 +33,7 @@ The public site has a **FAQ** based on the 2025 info deck and separate bilingual
 
 ## Provisional agenda
 
-The homepage currently proposes a **09:15–10:15** departmental meeting (early start not yet confirmed), **10:30–11:00** Jörg Krüger keynote (title to follow), **11:00–11:45** open research block I, **11:45–12:15** poster/demo session I (PWZ1 + PWZ2), a **separate 12:15–13:00 lunch break**, Oli’s confirmed talk **“(Miss)Erfolgreich – Lektionen aus 13 Jahren Fraunhofer”** at **13:00–13:25** (25-minute allocation proposed), **13:25–14:10** open research block II, **14:10–14:20** short break/team transition, **14:20–15:50** Industrial Automation Challenge (both rooms), **15:50–16:20** poster/demo session II (both rooms), and **16:20–16:30** informal **F1 Score Quiz** and closing among the posters (PWZ1 and PWZ2). This ends the technical program **30 minutes** before the **17:00 Christmas gathering in room 457**.
+The homepage currently proposes a **09:15–10:15** departmental meeting (early start not yet confirmed), **10:30–11:00** Jörg Krüger keynote (title to follow), **11:00–11:45** open research block I, **11:45–12:15** poster/demo session I (PWZ1 + PWZ2), a **separate 12:15–13:00 lunch break**, Oliver Heimann’s confirmed talk **“(Miss)Erfolgreich – Lektionen aus 13 Jahren Fraunhofer”** at **13:00–13:25** (25-minute allocation proposed), **13:25–14:10** open research block II, **14:10–14:20** short break/team transition, **14:20–15:50** Industrial Automation Challenge (both rooms), **15:50–16:20** poster/demo session II (both rooms), and **16:20–16:30** informal **F1 Score Quiz** and closing among the posters (PWZ1 and PWZ2). This ends the technical program **30 minutes** before the **17:00 Christmas gathering in room 457**.
 
 The agenda is an invitation to register, not a fixed speaker allocation. Interested researchers can volunteer without knowing their final titles.
 
