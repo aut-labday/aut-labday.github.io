@@ -139,6 +139,12 @@
     </div>
   </div></section>
   <section id="participate"><div class="container"><div class="section-head"><span class="section-index">05</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Sag uns frühzeitig, ob du teilnehmen möchtest und ob du einen Poster-, Demo- oder Vortragsbeitrag anbieten willst. Ein vorläufiges Thema reicht aus; die genaue Einteilung der Vorträge folgt nach den Anmeldungen.</p>
+    <div class="deadline-box" id="deadlines" aria-label="Vorläufige Fristen">
+      <span data-i18n="timelineFirst"><b>06.11.</b> · Thema und Format anmelden (vorläufig)</span>
+      <span data-i18n="timelinePoster"><b>27.11.</b> · Fertige A2-Posterdateien (vorläufig)</span>
+      <span data-i18n="timelineSlides"><b>04.12.</b> · Fertige Vortragsfolien (vorläufig)</span>
+    </div>
+    <p class="note" data-i18n="timelineNote">Meldet euch gern schon vorher an. Für die erste Rückmeldung genügt ein grober Arbeitstitel; die genannten Fristen sind noch nicht endgültig bestätigt.</p>
     <div class="contribution-grid"><article class="contribution"><h3 data-i18n="talkTitle">Projektvorträge</h3><p data-i18n="talkBody">Für wissenschaftliche Mitarbeitende stehen zwei Vortragsblöcke à 45 Minuten zur Verfügung. Die Anzahl und Dauer der Einzelbeiträge wird nach den Interessenbekundungen festgelegt.</p></article><article class="contribution"><h3 data-i18n="postersTitle">Poster & Demos</h3><p data-i18n="postersBody">Für Studierende und studentische Mitarbeitende: A2-Poster oder kurze Demos in zwei 30-minütigen Sessions mit freiem Rundgang. Bitte Thema und Format mit eurer Betreuung abstimmen.</p></article></div>
     <p class="note" data-i18n="formSeeGuidelines">Ausführliche Hinweise und vorläufige Fristen findest du oben unter <a href="#instructions">Informationen für Beitragende</a>.</p>
     <div class="rsvp-panel" id="registration">
@@ -181,14 +187,14 @@
         <div class="form-field contribution-topic" data-contribution-field="demo" hidden><label for="rsvp-demo-topic" data-i18n="formDemoTopic">Thema der Demo / Kurzbeschreibung *</label><input id="rsvp-demo-topic" name="demoTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
         <div class="form-field contribution-topic" data-contribution-field="talk" hidden><label for="rsvp-talk-topic" data-i18n="formTalkTopic">Vortragsthema / Arbeitstitel *</label><input id="rsvp-talk-topic" name="talkTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
         <div class="form-field"><label for="rsvp-details" data-i18n="formDetails">Weitere Angaben (z. B. Betreuer/in, Team oder besondere Anforderungen)</label><textarea id="rsvp-details" name="details" maxlength="1200" data-i18n-placeholder="formDetailsPlaceholder" placeholder="Optional: Betreuer/in, zusätzliche Informationen oder Hinweise …"></textarea></div>
-        <p class="form-note" data-i18n="formPrivacy">Diese Website speichert keine Antworten. Beim Klicken auf „E-Mail vorbereiten“ wird eine vorausgefüllte Nachricht in deinem E-Mail-Programm geöffnet. Bitte diese anschließend selbst absenden. Alternativ kannst du die Angaben kopieren.</p>
+        <p class="form-note" data-i18n="formPrivacy">Diese Website speichert keine Antworten. Beim Klicken auf „E-Mail vorbereiten“ wird eine vorausgefüllte Nachricht in deinem E-Mail-Programm geöffnet. Bitte die Nachricht anschließend wirklich absenden, damit deine Anmeldung bei uns ankommt. Alternativ kannst du die Angaben kopieren und selbst per E-Mail versenden.</p>
         <div class="form-actions"><button class="form-btn" type="submit" data-i18n="formSend">E-Mail vorbereiten</button><button class="form-btn secondary" type="button" id="copy-registration" data-i18n="formCopy">Angaben kopieren</button></div>
         <div class="form-status" id="form-status" aria-live="polite" role="status"></div>
       </form>
     </div>
   </div></section>
 </main>
-<footer class="footer"><div class="container footer-main"><div><strong style="font-size:13px">AUT Lab Day 2026</strong><small data-i18n="footerText">Gemeinsamer interner Forschungstag von Fraunhofer IPK und TU Berlin.</small><small data-i18n="footerStatus">Informelle Veranstaltungsseite · Programm vorläufig</small></div><div class="footer-links"><a href="https://www.ipk.fraunhofer.de/" target="_blank" rel="noopener noreferrer">Fraunhofer IPK</a><a href="https://www.tu.berlin/" target="_blank" rel="noopener noreferrer">TU Berlin</a></div></div></footer>
+<footer class="footer"><div class="container footer-main"><div><strong style="font-size:13px">AUT Lab Day 2026</strong><small data-i18n="footerText">Gemeinsamer interner Forschungstag von Fraunhofer IPK und TU Berlin.</small><small data-i18n="footerStatus">Labday am 10.12.2026 · Vorläufiges Programm</small><small><a href="mailto:vivek.chavan@ipk.fraunhofer.de" data-i18n="footerContact">Fragen oder Anregungen? Kontakt zum Organisationsteam</a></small></div><div class="footer-links"><a href="https://www.ipk.fraunhofer.de/" target="_blank" rel="noopener noreferrer">Fraunhofer IPK</a><a href="https://www.tu.berlin/" target="_blank" rel="noopener noreferrer">TU Berlin</a></div></div></footer>
 <noscript><div class="noscript">Die Website wird standardmäßig auf Deutsch angezeigt. / This website is displayed in German by default. Enable JavaScript to switch to English.</div></noscript>
 <script>
 (function(){
@@ -252,6 +258,10 @@
     researchPoint5:'<strong>Registration & submission:</strong> Register your interest and a provisional topic. The final selection, talk lengths and slide-submission instructions will follow.',
     researchDeadline1:'<b>Name and talk topic:</b> Fri, 6 Nov 2026 (proposed)',researchDeadline2:'<b>Presentation slides:</b> Fri, 4 Dec 2026 (proposed)',
     researchTemplateNote:'Note: The download in the Students tab is an <b>A2 poster template</b>, not a presentation-slide template.',
+    timelineFirst:'<b>6 Nov</b> · Register provisional topic and format (proposed)',
+    timelinePoster:'<b>27 Nov</b> · Final A2 poster files (proposed)',
+    timelineSlides:'<b>4 Dec</b> · Final presentation slides (proposed)',
+    timelineNote:'Please register as soon as possible. A rough working title is sufficient for the initial response; these deadlines are not yet finalized.',
     contributeTitle:'Participation & contributions',contributeLead:'Let us know early if you plan to attend or offer a poster, demo or research talk. A provisional topic is enough; the individual talk slots will be allocated after registrations.',
     talkTitle:'Research talks',talkBody:'Two 45-minute presentation blocks are reserved for research staff. The number and duration of individual talks will be decided after expressions of interest.',
     postersTitle:'Posters & demos',postersBody:'For students and student assistants: A2 posters or short demos, presented informally across two 30-minute sessions. Please coordinate the topic and format with your supervisor.',
@@ -267,9 +277,9 @@
     formFormatHint:'Select multiple formats if applicable. A topic/title is required for each contribution. Students should coordinate the topic and format with their supervisor beforehand.',
     formPosterTopic:'Poster topic / provisional title *',formDemoTopic:'Demo topic / short description *',formTalkTopic:'Talk topic / provisional title *',formTopicPlaceholder:'Provisional title or topic',
     formDetails:'Additional details (e.g. supervisor, team, special requirements)',formDetailsPlaceholder:'Optional: supervisor, additional information, or notes …',
-    formPrivacy:'This website does not store responses. “Prepare email” opens your email app with a prefilled message. Please review and send it yourself. Alternatively, copy your answers.',
+    formPrivacy:'This website does not store responses. “Prepare email” opens your email app with a prefilled message. Please send the email yourself to complete registration. Alternatively, copy your answers and email them to the organizers.',
     formSend:'Prepare email',formCopy:'Copy my answers',
-    footerText:'A joint internal research day of Fraunhofer IPK and TU Berlin.',footerStatus:'Informal event page · Program subject to change'
+    footerText:'A joint internal research day of Fraunhofer IPK and TU Berlin.',footerStatus:'Lab Day on 10 December 2026 · Preliminary program',footerContact:'Questions or suggestions? Contact the organizers'
   };
   const de={};document.querySelectorAll('[data-i18n]').forEach(el=>{de[el.dataset.i18n]=el.innerHTML});
   const apply=(lang)=>{const dict=lang==='en'?en:de;document.querySelectorAll('[data-i18n]').forEach(el=>{if(Object.prototype.hasOwnProperty.call(dict,el.dataset.i18n))el.innerHTML=dict[el.dataset.i18n]});document.documentElement.lang=lang;document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const key=el.dataset.i18nPlaceholder;el.placeholder=lang==='en'?(en[key]||''):(key==='formTopicPlaceholder'?'Vorläufiger Titel oder Thema':'Optional: Betreuer/in, zusätzliche Informationen oder Hinweise …')});document.querySelectorAll('[data-lang]').forEach(el=>{el.setAttribute('aria-pressed',String(el.dataset.lang===lang))});try{localStorage.setItem('aut-labday-lang',lang)}catch(e){}};
