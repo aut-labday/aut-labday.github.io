@@ -13,7 +13,7 @@ GitHub Pages must be enabled in repository settings for the site to go live.
 - All event wording is contained in `index.html`.
 - German is the default HTML; English strings live in the `en` object near the end of the file.
 - Every editable bilingual content element has a `data-i18n` key.
-- The date **10 December 2026** and two adjacent rooms **PWZ2/PWZ1** are booked. Time allocations, room functions, early departmental-meeting start, invited-talk length, final speakers and challenge details are **provisional**.
+- The date **10 December 2026** and two adjacent rooms **PWZ2/PWZ1** are booked. The website lists both booked rooms for poster sessions and the challenge, while exact poster layout, start time of the departmental meeting, Oli's talk length, speaker allocation, deadlines and challenge scenario remain **provisional**.
 - Past editions and the archive have been removed until approved archival content is actually available.
 - The RSVP form is under `Teilnahme & Beiträge`. It is bilingual, with name, email, attendance, role (including student, intern, administration), affiliation (OE410/OE420/TU Berlin/other), separate poster/demo/talk options, mandatory proposed topic/title for every selected contribution, and optional additional details.
 - The form asks for **proposed** contributions only: final presentation slots and materials are coordinated separately.
@@ -24,16 +24,16 @@ GitHub Pages must be enabled in repository settings for the site to go live.
 
 The public site has a **FAQ** based on the 2025 info deck and separate bilingual, clickable **Studierende / HiWis** and **WiMis / Forschende** instruction tabs.
 
-- **Confirmed rooms:** adjacent **PWZ2** (larger, main talk/plenary space) and **PWZ1** (proposed posters/demos/breakout space) on December 10. The exact room usage, poster displays and ability to move walls are unconfirmed.
-- Student poster / demo: **A2 portrait poster**, optionally a short demo, coordinate topic/format with the supervisor, a profile with name and photo, clear images and bullet points rather than long text. A poster template is optional.
-- WiMi / researchers: two **45-minute open presentation blocks** with volunteer expressions of interest first. The 2025 **10-minute talk + 5-minute discussion** serves as historical guidance, not a confirmed 2026 slot length. Number and duration of presentations to be finalized after registrations.
+- **Confirmed rooms:** adjacent **PWZ2** (larger, main talk/plenary room) and **PWZ1** on December 10. Both rooms are planned for the two poster/demo sessions and the Industrial Automation Challenge. Room arrangement and poster mounting logistics require coordination. The **Christmas gathering starts at 17:00 in room 457**.
+- Student poster / demo: **A2 poster** or a short demo, coordinate topic/format with a supervising WiMi, include a profile with name and photo, and focus on scientific/technical images and a few concise bullet points instead of organizational information. The downloadable poster template is optional. **Two dedicated 30-minute poster/demo sessions** provide time for informal browsing and discussion; there is no formal full-audience poster talk. Final digital poster files are collected for coordinated printing; the submission mechanism remains to be announced.
+- WiMi / researchers: two **45-minute open presentation blocks**, with volunteers first. A short technical highlight, preferably supported by a strong image, is more important than administrative project metadata. Earlier events featured both **3-minute/one-slide project spotlights (2023)** and **10-minute talk + 5-minute Q&A (2025)**; no single-speaker format is fixed for 2026. TU Berlin research contributions are explicitly welcome; number and duration of talks will be finalized after registrations.
 - **Proposed, not confirmed 2026 dates:** Friday **November 6** for preliminary topics and formats; Friday **November 27** for final posters; Friday **December 4** for final research slides. Early registration is encouraged even before November 6.
 - The supplied **original A2 PowerPoint poster template** has seven layout slides. It is **not a WiMi talk slide template**.
 - **Poster template download is active:** the original A2 PowerPoint has been uploaded to `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx` and is directly linked in the student instructions. Do not replace it without checking public redistribution approval.
 
 ## Provisional agenda
 
-The homepage currently proposes a **09:15–10:15** departmental meeting (early start not yet confirmed), **10:30–11:00** keynote from Prof. Jörg Krüger, two **45-minute** open research-talk blocks, Oli’s confirmed guest talk **“(Miss)Erfolgreich – Lektionen aus 13 Jahren Fraunhofer”** (25-minute slot proposed), **90 minutes** for combined lunch/posters/demos, **90 minutes** for the Industrial Automation Challenge and a **10-minute** closing quiz. The technical programme ends at **16:15**, allowing **45 minutes** before the Christmas gathering.
+The homepage currently proposes a **09:15–10:15** departmental meeting (early start not yet confirmed), **10:30–11:00** Jörg Krüger keynote (title to follow), **11:00–11:45** open research block I, **11:45–12:15** poster/demo session I (PWZ1 + PWZ2), a **separate 12:15–13:00 lunch break**, Oli’s confirmed talk **“(Miss)Erfolgreich – Lektionen aus 13 Jahren Fraunhofer”** at **13:00–13:25** (25-minute allocation proposed), **13:25–14:10** open research block II, **14:10–14:40** poster/demo session II (both PWZ rooms), a short transition, **14:50–16:20** Industrial Automation Challenge (both rooms), and **16:20–16:30** closing quiz (PWZ2). This ends the technical program **30 minutes** before the **17:00 Christmas gathering in room 457**.
 
 The agenda is an invitation to register, not a fixed speaker allocation. Interested researchers can volunteer without knowing their final titles.
 
