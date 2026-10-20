@@ -23,7 +23,7 @@
     .rsvp-form input:not([type=checkbox]):not([type=radio]),.rsvp-form select,.rsvp-form textarea{font:inherit;width:100%;border:1px solid #bfcac6;border-radius:3px;padding:11px 12px;background:#fff;color:var(--ink)}
     .rsvp-form textarea{min-height:105px;resize:vertical}.rsvp-form input:focus-visible,.rsvp-form select:focus-visible,.rsvp-form textarea:focus-visible{outline:2px solid var(--green);outline-offset:2px}
     .rsvp-form fieldset{border:0;padding:0;margin:0;min-width:0}.choice-row{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:9px}
-    .choice{font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.choice input{accent-color:var(--green);width:17px;height:17px;margin:0}
+    .choice{font-size:14px;display:inline-flex;align-items:center;gap:8px;cursor:pointer}.choice[hidden]{display:none!important}.choice input{accent-color:var(--green);width:17px;height:17px;margin:0}
     .form-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:4px}.form-btn{border:1px solid var(--green-dark);background:var(--green-dark);color:#fff;border-radius:3px;padding:11px 16px;font-weight:650;cursor:pointer}.form-btn:hover{background:#11705b;color:#fff}.form-btn.secondary{background:#fff;color:var(--green-dark)}.form-btn.secondary:hover{background:var(--soft)}
     .form-note{font-size:12px;color:var(--muted);max-width:760px}.form-status{font-size:13px;color:var(--green-dark);min-height:1.3em}
     .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:30px}.fact{padding:22px;background:var(--paper)}.fact strong{display:block;font-size:12px;letter-spacing:.06em;color:var(--green-dark);text-transform:uppercase;margin-bottom:7px}.fact p{margin:0;font-size:14px;color:#415156}
@@ -171,7 +171,7 @@
             <label class="choice"><input type="checkbox" name="contribution" value="demo"><span data-i18n="formDemo">Demo / Demonstrator</span></label>
             <label class="choice"><input type="checkbox" name="contribution" value="talk"><span data-i18n="formTalk">Präsentation / Vortrag</span></label>
           </div>
-          <p class="form-hint" data-i18n="formFormatHint">Mehrfachauswahl möglich. Für jeden Beitrag bitte einen Arbeitstitel angeben.</p>
+          <p class="form-hint" data-i18n="formFormatHint">Die Beitragsarten richten sich nach deiner Rolle. Mehrfachauswahl möglich; bitte für jeden Beitrag einen Arbeitstitel angeben.</p>
         </fieldset>
         <div class="form-field contribution-topic" data-contribution-field="poster" hidden><label for="rsvp-poster-topic" data-i18n="formPosterTopic">Posterthema / Arbeitstitel *</label><input id="rsvp-poster-topic" name="posterTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
         <div class="form-field contribution-topic" data-contribution-field="demo" hidden><label for="rsvp-demo-topic" data-i18n="formDemoTopic">Thema der Demo / Kurzbeschreibung *</label><input id="rsvp-demo-topic" name="demoTopic" type="text" maxlength="250" data-i18n-placeholder="formTopicPlaceholder" placeholder="Vorläufiger Titel oder Thema"></div>
@@ -260,7 +260,7 @@
     formRole:'My role *',rolePlaceholder:'Please select',roleProfessor:'Professor',roleWimi:'Research staff (WiMi)',roleHiwi:'Student assistant (HiWi)',roleStudent:'Student (Bachelor/Master)',roleIntern:'Intern',roleAdmin:'Administrative staff',roleOther:'Other',
     formAffiliation:'Department / affiliation *',affiliationPlaceholder:'Please select',affiliationOther:'Other (please specify below)',
     formContribution:'I would like to propose a contribution (optional)',formPoster:'Poster (A2)',formDemo:'Demo / Demonstrator',formTalk:'Presentation / Talk',
-    formFormatHint:'Multiple selections are allowed. Please give a working title for each contribution.',
+    formFormatHint:'Contribution options depend on your role. Multiple selections are allowed; please provide a working title for each contribution.',
     formPosterTopic:'Poster topic / provisional title *',formDemoTopic:'Demo topic / short description *',formTalkTopic:'Talk topic / provisional title *',formTopicPlaceholder:'Provisional title or topic',
     formDetails:'Additional details (e.g. supervisor, team, special requirements)',formDetailsPlaceholder:'Optional: supervisor, additional information, or notes …',
     formPrivacy:'This website does not store responses. “Prepare email” opens your email app with a prefilled message. Please send the email yourself to complete registration. Alternatively, copy your answers and email them to the organizers.',
@@ -285,17 +285,33 @@
     de:{yes:'Ja',no:'Nein',none:'Kein Beitrag',poster:'Poster (A2)',demo:'Demo / Demonstrator',talk:'Präsentation / Vortrag',role:{professor:'Professor/in',wimi:'WiMi',hiwi:'HiWi',student:'Studierende/r',intern:'Praktikant/in',admin:'Verwaltung',other:'Sonstiges'},affiliation:{oe410:'Fraunhofer IPK · OE410',oe420:'Fraunhofer IPK · OE420',tu:'TU Berlin',other:'Sonstiges'}},
     en:{yes:'Yes',no:'No',none:'No contribution',poster:'Poster (A2)',demo:'Demo / Demonstrator',talk:'Presentation / Talk',role:{professor:'Professor',wimi:'Research staff (WiMi)',hiwi:'Student assistant (HiWi)',student:'Student (Bachelor/Master)',intern:'Intern',admin:'Administrative staff',other:'Other'},affiliation:{oe410:'Fraunhofer IPK · OE410',oe420:'Fraunhofer IPK · OE420',tu:'TU Berlin',other:'Other'}}
   };
+  const studentRoles=new Set(['hiwi','student','intern']);
+  const staffRoles=new Set(['wimi','professor','admin','other']);
   function syncContributionFields(){
-    document.querySelectorAll('[data-contribution-field]').forEach(section=>{
+    rsvpForm.querySelectorAll('[data-contribution-field]').forEach(section=>{
       const kind=section.dataset.contributionField;
-      const selected=!!rsvpForm.querySelector('input[name="contribution"][value="'+kind+'"]:checked');
+      const selected=!!rsvpForm.querySelector('input[name="contribution"][value="'+kind+'"]:checked:not(:disabled)');
       section.hidden=!selected;
       const topic=section.querySelector('input');
       topic.required=selected;
     });
   }
+  function syncContributionOptions(){
+    const role=rsvpForm.querySelector('#rsvp-role').value;
+    rsvpForm.querySelectorAll('input[name="contribution"]').forEach(input=>{
+      const disallowed=(studentRoles.has(role)&&input.value==='talk')||(staffRoles.has(role)&&input.value==='poster');
+      input.closest('label').hidden=disallowed;
+      input.disabled=disallowed;
+      if(disallowed){
+        input.checked=false;
+        rsvpForm.querySelector('[data-contribution-field="'+input.value+'"] input').value='';
+      }
+    });
+    syncContributionFields();
+  }
+  rsvpForm.querySelector('#rsvp-role').addEventListener('change',syncContributionOptions);
   rsvpForm.querySelectorAll('input[name="contribution"]').forEach(input=>input.addEventListener('change',syncContributionFields));
-  syncContributionFields();
+  syncContributionOptions();
   function getRegistration(){
     syncContributionFields();
     if(!rsvpForm.reportValidity())return null;
