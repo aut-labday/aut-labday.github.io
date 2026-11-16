@@ -7,10 +7,10 @@ A lightweight bilingual (German default, English toggle) static website for the 
 
 ## Event information
 
-- Venue: adjacent rooms **PWZ2** (main talks/plenary) and **PWZ1**. Posters, demos and the workshop use both rooms.
+- Venue: **PWZ3** for talks and plenary sessions; **PWZ1/PWZ2** for posters and monitor presentations; **laboratories 071/073** for demonstrations by arrangement. The workshop uses PWZ1/PWZ2.
 - The 09:15–10:15 departmental meeting, morning keynote by Prof. Jörg Krüger, two 45-minute research-talk blocks, two 30-minute poster/demo sessions, and Oliver Heimann's talk are on the agenda.
 - **14:20–15:50: AUT Ideenwerkstatt / AUT Ideas Workshop.** Small mixed groups work on actual research questions, technical challenges or possible applications relevant to the participating groups. They consider the potential value, technical feasibility, a possible approach and a first useful next step, then share their ideas. Specific starting topics will be introduced closer to the event, informed by the groups' ongoing work. It is **not** a fictional industrial-customer challenge or a competition.
-- **16:20–16:30:** Short F1-Score-Quiz and closing near the posters.
+- **16:20–16:30:** Short online F1-Score-Quiz and closing.
 - **From 17:00:** Christmas celebration in **room 457**. The Lab Day ends at 16:30.
 - The published schedule is preliminary; speaker contributions and exact workshop topics can be updated as preparations progress.
 
@@ -18,9 +18,9 @@ A lightweight bilingual (German default, English toggle) static website for the 
 
 The website has separate **Studierende / HiWis** and **WiMis / Forschende** tabs.
 
-- Students: A2 research poster or short demo; coordinate topic and format with supervisor. Use technical images and concise bullet points. Two open poster/demo sessions. The downloadable A2 PowerPoint template is in `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx` and is optional. Finished posters are collected for printing.
+- Students, student assistants and interns: A2 research poster, limited screen/video presentation, or laboratory demo; coordinate topic and format with supervisor. Finished A2 posters must be delivered as **PDF by 27 November** for printing. Template: `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx`. Screen slots are allocated in registration order; lab demos require advance setup and support information.
 - Researchers: Volunteer to give project talks in the two 45-minute research blocks. Individual talk lengths and allocations depend on registrations.
-- Currently displayed dates: **6 November** for proposed topics and formats, **27 November** for poster files, **4 December** for talk slides. Attendees can register earlier with a working title.
+- Current website asks participants to register topics now, submit final **poster PDFs by 27 November**, and submit talk slides by **4 December**.
 
 ## Registration
 
@@ -30,7 +30,7 @@ The website uses **email-based registration**, not a hosted form backend. It pre
 
 The preferred processing workflow is an Outlook inbox rule that moves messages with `Lab Day 2026` in the subject to a dedicated folder. The folder can be exported for consolidated registration analysis, retaining individual messages as a record for participants and organizers.
 
-Keep the form's bilingual field labels, required contribution topics and stable email format when editing.
+Keep the form's bilingual field labels, required contribution topics and stable email format when editing. Student roles may select Poster, Monitor, or Demo; researcher/staff roles may select Talk or Demo. Changing roles clears ineligible selections.
 
 ## Website maintenance
 
