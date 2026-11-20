@@ -18,13 +18,15 @@ A lightweight bilingual (German default, English toggle) static website for the 
 
 The website has separate **Studierende / HiWis** and **WiMis / Forschende** tabs.
 
-- Students, student assistants and interns: A2 research poster, limited screen/video presentation, or laboratory demo; coordinate topic and format with supervisor. Finished A2 posters must be delivered as **PDF by 27 November** for printing. Template: `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx`. Screen slots are allocated in registration order; lab demos require advance setup and support information.
-- Researchers: Volunteer to give project talks in the two 45-minute research blocks. Individual talk lengths and allocations depend on registrations.
-- Current website asks participants to register topics now, submit final **poster PDFs by 27 November**, and submit talk slides by **4 December**.
+- Students, student assistants and interns: A2 research poster, limited screen/video presentation, or laboratory demo; coordinate topic and format with supervisor. Finished A2 posters must be delivered as **PDF by 30 November** for printing. Template: `assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx`. Screen slots are allocated in registration order; lab demos require advance setup and support information.
+- Researchers: Volunteer to give project talks in the two 45-minute research blocks. Individual talk lengths and allocations depend on registrations. Presentation slides are due **7 December**.
+- Current website asks participants to register topics now, submit final **poster PDFs by Monday 30 November**, and submit talk slides by **Monday 7 December**.
 
 ## Registration
 
 The registration form is integrated with the website's language toggle.
+
+Poster PDFs should be saved to the shared `Labday_2026/Posters` folder on the OE40000 Gruppenplatte. Contributors without access can send their PDFs directly by email to the organizer. The full Windows share path is printed in the contributor instructions on the website.
 
 The website uses **email-based registration**, not a hosted form backend. It prepares a structured message addressed to `vivek.chavan@ipk.fraunhofer.de` with a stable subject prefix (`Lab Day 2026`). The participant **must send the prepared email** to register. A copy option is also provided. Responses are not stored on GitHub Pages.
 
