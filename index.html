@@ -29,6 +29,7 @@
     .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:30px}.fact{padding:22px;background:var(--paper)}.fact strong{display:block;font-size:12px;letter-spacing:.06em;color:var(--green-dark);text-transform:uppercase;margin-bottom:7px}.fact p{margin:0;font-size:14px;color:#415156}
     .role-tabs{display:flex;gap:6px;border-bottom:1px solid var(--rule);margin:29px 0 0}.role-tab{padding:12px 21px;background:transparent;color:var(--muted);border:0;border-bottom:3px solid transparent;font-weight:650;cursor:pointer}.role-tab[aria-selected="true"]{color:var(--green-dark);border-bottom-color:var(--green)}.role-panel{padding:27px 0 8px}.role-panel[hidden]{display:none}.instructions-list{padding-left:23px;color:#415156;line-height:1.75;max-width:850px}.instructions-list li{margin-bottom:10px}.instructions-list strong{color:var(--ink)}
     .deadline-box{display:flex;flex-wrap:wrap;gap:10px 28px;background:var(--soft);padding:16px 20px;border-left:3px solid var(--green);margin-top:17px}.deadline-box span{font-size:13px;color:#425054}.deadline-box b{color:var(--ink)}
+.poster-submission{margin-top:18px;max-width:820px;border-top:1px solid var(--rule);padding-top:15px;color:#40554d}.poster-submission strong{display:block;font-size:13px}.poster-submission code{display:block;margin-top:7px;background:var(--soft);padding:11px 13px;font-size:12px;line-height:1.65;overflow-wrap:anywhere;white-space:normal}.poster-submission p{font-size:13px;margin:10px 0 0}.poster-submission a{color:var(--green-dark)}
     .download-link[hidden],.template-status[hidden]{display:none!important}.download-link{display:inline-flex;align-items:center;gap:9px;padding:11px 17px;border:1px solid var(--green-dark);border-radius:3px;background:var(--green-dark);color:#fff;text-decoration:none;font-size:13px;font-weight:700;margin-top:12px}.download-link:hover{background:var(--green);color:#fff}.template-status{display:inline-block;font-size:13px;color:var(--muted);padding:12px 0}
     @media(max-width:650px){.facts{grid-template-columns:1fr}.role-tab{flex:1;padding:12px 9px;font-size:13px}}
     .form-field[hidden],.contribution-topic[hidden]{display:none}
@@ -103,7 +104,7 @@
 
   <section id="instructions"><div class="container">
     <div class="section-head"><span class="section-index">04</span><h2 data-i18n="instructionsTitle">Informationen für Beitragende</h2></div>
-    <p class="lede" data-i18n="instructionsIntro">Hinweise zu Vorträgen, Postern und Demos. Die <a href="#deadlines">Abgabefristen</a> stehen bei der Anmeldung.</p>
+    <p class="lede" data-i18n="instructionsIntro">Hinweise zu Vorträgen, Postern, Monitoren und Demos. Die <a href="#deadlines">Abgabefristen</a> stehen bei der Anmeldung.</p>
     <div class="role-tabs" role="tablist" aria-label="Informationen für Zielgruppen">
       <button type="button" class="role-tab" id="tab-students" role="tab" aria-selected="true" aria-controls="panel-students" data-role-tab="students" data-i18n="studentsTab">Studierende / HiWis</button>
       <button type="button" class="role-tab" id="tab-researchers" role="tab" aria-selected="false" aria-controls="panel-researchers" data-role-tab="researchers" data-i18n="researchersTab">WiMis / Forschende</button>
@@ -113,12 +114,17 @@
       <p data-i18n="studentIntro">Studierende, HiWis und Praktikantinnen und Praktikanten können ihre Arbeit als <strong>A2-Poster</strong>, am <strong>Monitor</strong> oder mit einer <strong>Demo</strong> präsentieren. Bitte stimmt Thema und Format mit eurer Betreuung ab.</p>
       <ul class="instructions-list">
         <li data-i18n="studentPoint1"><strong>Inhalt:</strong> Zeigt eure technische Arbeit mit aussagekräftigen Bildern, Diagrammen und wenigen Stichpunkten. Das Poster soll Neugier wecken und Gespräche anregen.</li>
-        <li data-i18n="studentPoint2"><strong>Poster:</strong> A2-Format. Nutzt die PowerPoint-Vorlage unten oder ein eigenes Layout und gebt das fertige Poster <strong>bis 27.11. als PDF</strong> ab.</li>
+        <li data-i18n="studentPoint2"><strong>Poster:</strong> A2-Format. Nutzt die PowerPoint-Vorlage unten oder ein eigenes Layout. Fertiges Poster <strong>bis Montag, 30.11.2026 als A2-PDF</strong> einreichen.</li>
         <li data-i18n="studentPoint3"><strong>Steckbrief:</strong> Ergänzt Namen und Profilfoto.</li>
         <li data-i18n="studentPoint4"><strong>Monitor:</strong> Für Videos oder digitale Präsentationen steht ein großer Bildschirm zur Verfügung. Die Plätze sind begrenzt und werden nach Eingang der Anmeldungen vergeben.</li>
         <li data-i18n="studentPoint5"><strong>Demo:</strong> Praktische Demonstrationen finden nach Absprache in den Laboren <b>071 oder 073</b> statt. Gebt den benötigten Aufbau und die erforderliche Unterstützung bei der Anmeldung an.</li>
       </ul>
       <a class="download-link" id="poster-download" href="assets/Labday_IPK_IWF_Postervorlage_A2_mit_Steckbrief.pptx" download data-i18n="downloadPoster">A2-Postervorlage (.pptx) herunterladen ↓</a>
+      <div class="poster-submission">
+        <strong data-i18n="posterFolderLabel">Poster-PDFs hier ablegen (Gruppenplatte):</strong>
+        <code>Q:\OE40000-Gruppenplatte\OE40000\06_Marketing_und_Veranstaltungen\02_Interne Veranstaltungen\03_Labday\Labday_2026\Posters</code>
+        <p data-i18n="posterFolderFallback">Kein Zugriff auf den Ordner? Schickt euer fertiges PDF an <a href="mailto:vivek.chavan@ipk.fraunhofer.de">vivek.chavan@ipk.fraunhofer.de</a>.</p>
+      </div>
     </div>
     <div class="role-panel" id="panel-researchers" role="tabpanel" aria-labelledby="tab-researchers" data-role-panel="researchers" hidden>
       <h3 data-i18n="researchHeader">Projektvortrag für wissenschaftliche Mitarbeitende</h3>
@@ -130,11 +136,11 @@
       </ul>
     </div>
   </div></section>
-  <section id="participate"><div class="container"><div class="section-head"><span class="section-index">05</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Meldet euch für den Labday an und gebt an, ob ihr einen Vortrag, ein Poster oder eine Demo beitragen möchtet. Ein vorläufiger Arbeitstitel reicht aus.</p>
+  <section id="participate"><div class="container"><div class="section-head"><span class="section-index">05</span><h2 data-i18n="contributeTitle">Teilnahme & Beiträge</h2></div><p class="lede" data-i18n="contributeLead">Meldet euch für den Labday an und gebt an, ob ihr einen Vortrag, ein A2-Poster, einen Monitorbeitrag oder eine Demo präsentieren möchtet. Ein vorläufiger Arbeitstitel genügt.</p>
     <div class="deadline-box" id="deadlines" aria-label="Termine">
       <span data-i18n="timelineFirst"><b>Jetzt</b> · Beiträge und Themen anmelden</span>
-      <span data-i18n="timelinePoster"><b>27.11.</b> · Poster als PDF einreichen</span>
-      <span data-i18n="timelineSlides"><b>04.12.</b> · Vortragsfolien abgeben</span>
+      <span data-i18n="timelinePoster"><b>30.11.</b> · A2-Poster als PDF abgeben</span>
+      <span data-i18n="timelineSlides"><b>07.12.</b> · Vortragsfolien abgeben</span>
     </div>
     <p class="note" data-i18n="timelineNote">Bitte meldet Beiträge möglichst bald an, damit wir die Räume und die Präsentationen einteilen können.</p>
     <div class="rsvp-panel" id="registration">
@@ -229,32 +235,34 @@
     deliverable:'<strong>Outcome:</strong> A short concept per team describing the problem, potential value, proposed approach and a useful next step.',
     challengeNote:'The specific topics will be introduced shortly before Lab Day.',
     instructionsTitle:'Information for contributors',
-    instructionsIntro:'Guidelines for talks, posters and demos. See the <a href="#deadlines">submission dates</a> in the registration section.',
+    instructionsIntro:'Guidelines for talks, posters, screens and demos. See the <a href="#deadlines">submission dates</a> in the registration section.',
     studentsTab:'Students / Student assistants',researchersTab:'Research staff (WiMi)',
     studentHeader:'Poster, screen presentation or demo',
     studentIntro:'Students, student assistants and interns can present their work using an <strong>A2 poster</strong>, a <strong>screen</strong> or a <strong>demo</strong>. Please coordinate your topic and format with your supervisor.',
     studentPoint1:'<strong>Content:</strong> Use clear images, diagrams and concise bullet points to highlight your technical work and spark discussions.',
-    studentPoint2:'<strong>Poster:</strong> A2 format. Use the PowerPoint template below or your own layout. Submit the finished poster <strong>as a PDF by 27 November</strong>.',
+    studentPoint2:'<strong>Poster:</strong> A2 format. Use the PowerPoint template below or your own layout. Submit the final poster <strong>as an A2 PDF by Monday, 30 November 2026</strong>.',
     studentPoint3:'<strong>Profile:</strong> Include your name and photo.',
     studentPoint4:'<strong>Screen:</strong> A large monitor is available for videos and digital presentations. Availability is limited and allocated in registration order.',
     studentPoint5:'<strong>Demo:</strong> Practical demonstrations can take place in lab <b>071 or 073</b> by arrangement. Specify the setup and support required when registering.',
-    studentDeadline1:'<b>Topic and format:</b> Fri, 6 Nov 2026',studentDeadline2:'<b>Final poster:</b> Fri, 27 Nov 2026',
+    studentDeadline1:'<b>Topic and format:</b> Fri, 6 Nov 2026',studentDeadline2:'<b>Final A2 poster PDF:</b> Mon, 30 Nov 2026',
     downloadPoster:'Download A2 poster template (.pptx) ↓',
+    posterFolderLabel:'Save finished poster PDFs here (shared department drive):',
+    posterFolderFallback:'No access to the folder? Email your final PDF to <a href="mailto:vivek.chavan@ipk.fraunhofer.de">vivek.chavan@ipk.fraunhofer.de</a>.',
     researchHeader:'Research project talk',
     researchIntro:'Researchers from Fraunhofer IPK and TU Berlin can present current projects and research ideas. Two 45-minute blocks are reserved. Register your interest using the form.',
     researchPoint1:'<strong>Topic:</strong> Introduce a current project, technical challenge or research result.',
     researchPoint2:'<strong>Slides:</strong> Focus on an interesting technical highlight and clear visuals rather than project administration.',
     researchPoint3:'<strong>Exchange:</strong> What is relevant to colleagues in other IPK groups and TU Berlin? Where could new ideas emerge?',
-    researchDeadline1:'<b>Talk topic:</b> Fri, 6 Nov 2026',researchDeadline2:'<b>Presentation slides:</b> Fri, 4 Dec 2026',
+    researchDeadline1:'<b>Talk topic:</b> Fri, 6 Nov 2026',researchDeadline2:'<b>Presentation slides:</b> Mon, 7 Dec 2026',
     timelineFirst:'<b>Now</b> · Register contributions and topics',
-    timelinePoster:'<b>27 Nov</b> · Submit posters as PDFs',
-    timelineSlides:'<b>4 Dec</b> · Submit presentation slides',
+    timelinePoster:'<b>30 Nov</b> · Submit A2 posters as PDFs',
+    timelineSlides:'<b>7 Dec</b> · Submit presentation slides',
     timelineNote:'Please register contributions soon so we can plan the rooms and presentation slots.',
-    contributeTitle:'Participation & contributions',contributeLead:'Register for Lab Day and tell us if you would like to contribute a talk, poster or demo. A provisional working title is enough.',
+    contributeTitle:'Participation & contributions',contributeLead:'Register for Lab Day and indicate whether you would like to present a talk, A2 poster, screen contribution or demo. A provisional working title is enough.',
     talkTitle:'Research talks',talkBody:'For researchers at Fraunhofer IPK and TU Berlin. Register a topic; we will allocate the talk slots afterward.',
     postersTitle:'Posters & demos',postersBody:'Students and student assistants share A2 posters or demos in two open sessions. Coordinate your topic with your supervisor.',
     guidePoster:'<strong>Poster guidance:</strong> A2 format, informative images and bullet points rather than long text. Focus on research content, not project administration. As last year, include a short profile with your name and photograph. The poster template is a suggestion; custom layouts are welcome.',
-    guideDeadlines:'<strong>Submissions:</strong> Register your topic and preferred format early. Deadlines for final poster files (allowing time for printing) and presentation slides are still to be confirmed. No files need to be uploaded now.',
+    guideDeadlines:'<strong>Submissions:</strong> Final A2 poster PDFs by 30 November 2026; presentation slides by 7 December 2026.',
     guideTalks:'<strong>Research contributions:</strong> Researchers from Fraunhofer IPK and TU Berlin may propose project talks. Final talk slots will be coordinated as part of the program.',
     formSeeGuidelines:'Preparation details are available under <a href="#instructions">Contributor information</a>.',
     formTitle:'Register your participation',formIntro:'A quick response helps us plan. You can attend without presenting anything.',
